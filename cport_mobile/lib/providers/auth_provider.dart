@@ -14,7 +14,7 @@ class AuthProvider with ChangeNotifier {
   bool get isLoggedIn => _isLoggedIn;
   bool get isLoading => _isLoading;
 
-  get user => null;
+  Null get user => null;
 
   Future<bool> login(String email, String password) async {
     _isLoading = true;

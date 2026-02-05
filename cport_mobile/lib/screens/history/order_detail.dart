@@ -54,7 +54,7 @@ class OrderDetailPage extends StatelessWidget {
             // Tetap gunakan pengaman '?? []' untuk berjaga-jaga
             ...((order['items'] as List?) ?? [])
                 .map((item) => _buildProductItem(item, currencyFormat))
-                .toList(),
+                ,
 
             const Divider(height: 40),
             _buildPaymentSummary(currencyFormat),

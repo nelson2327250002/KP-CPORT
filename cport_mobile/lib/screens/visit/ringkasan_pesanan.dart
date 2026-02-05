@@ -232,7 +232,7 @@ class _RingkasanPesananPageState extends State<RingkasanPesananPage> {
                 ],
               ),
             )
-            .toList(),
+            ,
       ],
     );
   }

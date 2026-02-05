@@ -104,8 +104,9 @@ class AttendanceProvider with ChangeNotifier {
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied)
+      if (permission == LocationPermission.denied) {
         return Future.error('Izin GPS ditolak.');
+      }
     }
     return await Geolocator.getCurrentPosition();
   }

@@ -25,8 +25,9 @@ class _CheckInPageState extends State<CheckInPage> {
       LocationPermission permission = await Geolocator.checkPermission();
       if (permission == LocationPermission.denied) {
         permission = await Geolocator.requestPermission();
-        if (permission == LocationPermission.denied)
+        if (permission == LocationPermission.denied) {
           throw "Izin lokasi ditolak.";
+        }
       }
 
       // 2. Kirim Data ke Provider (Yang kini terhubung ke NestJS)
